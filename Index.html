@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siva Designer |Graphic Design </title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#0b0c1a;
+      color:#fff;
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit;}
+
+
+
+    /* Header */
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:rgba(11,12,26,0.7);
+      backdrop-filter:blur(10px);
+      z-index:1000;
+    }
+    header h1{
+      font-family:'Orange avenue',Luxury Script',cursive;
+      font-size:26px;
+      color:#a78bfa;
+      letter-spacing:1px;
+    }
+    nav a{
+      margin-left:25px;
+      font-size:14px;
+      color:#ddd;
+      transition:0.3s;
+    }
+    nav a:hover{color:#a78bfa;}
+
+    /* Hero */
+    .hero{
+      height:100vh;
+      background:linear-gradient(rgba(11,12,26,0.7),rgba(11,12,26,0.9)),
+      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      padding:0 8%;
+    }
+    .hero-content{
+      max-width:650px;
+      animation:fadeUp 1.5s ease;
+    }
+    .hero h2{
+      font-size:52px;
+      font-family:'Playfair Display',serif;
+      margin-bottom:20px;
+    }
+    .hero span{color:#a78bfa;}
+    .hero p{
+      color:#ccc;
+      font-size:16px;
+      margin-bottom:35px;
+    }
+    .btn{
+      padding:14px 34px;
+      background:#a78bfa;
+      color:#0b0c1a;
+      border-radius:40px;
+      font-weight:600;
+      transition:0.3s;
+      box-shadow:0 10px 40px rgba(167,139,250,0.4);
+    }
+    .btn:hover{transform:translateY(-3px);}
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(40px);} 
+      to{opacity:1;transform:translateY(0);} 
+    }
+
+    section{padding:100px 8%;}
+    section h3{
+      font-size:36px;
+      font-family:'Playfair Display',serif;
+      text-align:center;
+      margin-bottom:60px;
+      color:#a78bfa;
+    }
+
+    /* About */
+    .about p{
+      max-width:850px;
+      margin:auto;
+      text-align:center;
+      color:#bbb;
+      font-size:16px;
+    }
+
+    /* Services */
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:35px;
+    }
+    .service{
+      background:linear-gradient(145deg,#151631,#0e0f25);
+      padding:40px 30px;
+      border-radius:25px;
+      text-align:center;
+      transition:0.4s;
+    }
+    .service:hover{
+      transform:translateY(-12px);
+      box-shadow:0 20px 60px rgba(167,139,250,0.25);
+    }
+    .service h4{margin-bottom:15px;}
+    .service p{font-size:14px;color:#aaa;}
+
+    /* Portfolio */
+    .portfolio{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+    .work{
+      position:relative;
+      overflow:hidden;
+      border-radius:22px;
+    }
+    .work img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:0.6s;
+    }
+    .work:hover img{transform:scale(1.15);}
+    .work::after{
+      content:'View Project';
+      position:absolute;
+      inset:0;
+      background:rgba(11,12,26,0.7);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      opacity:0;
+      transition:0.4s;
+      font-weight:600;
+      letter-spacing:1px;
+    }
+    .work:hover::after{opacity:1;}
+
+    /* Contact */
+    .contact form{
+      max-width:650px;
+      margin:auto;
+      display:grid;
+      gap:18px;
+    }
+    input,textarea{
+      padding:16px;
+      border:none;
+      border-radius:14px;
+      background:#151631;
+      color:#fff;
+      font-family:'Poppins';
+    }
+    button{
+      padding:16px;
+      border:none;
+      border-radius:40px;
+      background:#a78bfa;
+      font-weight:600;
+      cursor:pointer;
+    }
+
+    /* Footer */
+    footer{
+      padding:30px;
+      text-align:center;
+      background:#070814;
+      color:#888;
+      font-size:14px;
+    }
+
+    @media(max-width:768px){
+      .hero h2{font-size:40px;}
+      header{padding:18px 6%;}
+      section{padding:80px 6%;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Siva Designer</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h2>Designs That <span>Build Brands</span></h2>
+    <p>I am a passionate graphic designer focused on creating visually engaging and meaningful designs that help brands communicate clearly and effectively. With a strong understanding of design principles, color theory, typography, and layout, I transform ideas into creative visual solutions that balance aesthetics with purpose. My approach begins with understanding the brand’s identity and audience, ensuring every design aligns with the brand vision and delivers a consistent visual message.
+
+I work on a wide range of design projects including brand identity, logos, social media creatives, marketing materials, and digital visuals. I pay close attention to detail, value clear communication, and strive to deliver high-quality designs on time. By combining creativity with strategy, my goal is to help brands stand out, connect with their audience, and leave a lasting impression.</p>
+    <a href="#contact" class="btn">Work With Me</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h3>About Me</h3>
+  <p>
+    I'm Siva, a creative graphic designer focused on cinematic visuals, branding, social media creatives, and marketing design. I design with strategy, emotion, and clarity to help brands attract customers and grow.
+  </p>
+</section>
+
+<section id="services">
+  <h3>Services</h3>
+  <div class="services">
+    <div class="service"><h4>Brand Identity</h4><p>Logo, brand systems, and visual identity design.</p></div>
+    <div class="service"><h4>Social Media Creatives</h4><p>High-engagement posts, ads, and campaigns.</p></div>
+    <div class="service"><h4>Marketing Design</h4><p>Flyers, posters, banners, and brochures.</p></div>
+    <div class="service"><h4>UI Visual Design</h4><p>Landing pages and app UI graphics.</p></div>
+  </div>
+</section>
+
+<section id="work">
+  <h3>My Works</h3>
+  <div class="portfolio">
+    <div class="work"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"></div>
+    <div class="work"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"></div>
+    <div class="work"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"></div>
+    <div class="work"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"></div>
+    <div class="work"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"></div>
+    <div class="work"><img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=1200&q=80"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h3>Let’s Work Together</h3>
+  
+
+
+
+<form onsubmit="sendWhatsApp(event)">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="email" id="email" placeholder="Your Email" required>
+  <textarea id="message" rows="5" placeholder="Tell me about your project" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+<script>
+function sendWhatsApp(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  const phoneNumber = "918008636673";
+
+  const text =
+    `Hello Siva Designer,%0A%0A` +
+    `Name: ${name}%0A` +
+    `Email: ${email}%0A` +
+    `Project Details: ${message}`;
+
+  const url = `https://wa.me/${phoneNumber}?text=${text}`;
+
+  window.open(url, "_blank");
+}
+</script>
+
+
+
+<footer>
+  © 2026 Siva Designer · Graphic Designer
+</footer>
+
+</body>
+</html>
+
